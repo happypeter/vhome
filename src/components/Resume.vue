@@ -1,5 +1,5 @@
 <template>
   <div>
-    相册
+    简历
   </div>
 </template>
