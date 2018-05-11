@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { getPathName } from '../constants/RouteConstants'
+
 export default {
   name: 'Header',
   computed: {
@@ -19,7 +21,7 @@ export default {
       return this.path !== '/'
     },
     pathName() {
-      return '简历'
+      return getPathName(this.path)
     }
   }
 }
