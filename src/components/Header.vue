@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header">
     <router-link to="/">Home</router-link>
     <span v-if="showNav">
       >
@@ -26,3 +26,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.header {
+  margin-bottom: 20px;
+}
+</style>
