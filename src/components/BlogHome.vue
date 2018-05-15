@@ -16,10 +16,6 @@ import axios from 'axios'
 
 export default {
   name: 'BlogHome',
-
-  created() {
-    this.$store.dispatch({ type: 'fetchPosts' })
-  },
   computed: {
     posts() {
       return this.$store.state.blog.all

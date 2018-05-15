@@ -15,6 +15,9 @@ export default {
   components: {
     Header,
     Footer
+  },
+  created() {
+    this.$store.dispatch({ type: 'fetchPosts' })
   }
 }
 </script>
