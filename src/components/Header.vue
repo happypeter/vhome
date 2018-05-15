@@ -3,13 +3,14 @@
     <router-link to="/">Home</router-link>
     <span v-if="showNav">
       >
-      <router-link :to="path">{{pathName}}</router-link>
+      <router-link :to="rootPath">{{pathName}}</router-link>
     </span>
   </div>
 </template>
 
 <script>
 import { getPathName } from '../constants/RouteConstants'
+import { getRootPath } from '../utils'
 
 export default {
   name: 'Header',
@@ -17,11 +18,14 @@ export default {
     path() {
       return this.$route.path
     },
+    rootPath() {
+      return getRootPath(this.path)
+    },
     showNav() {
       return this.path !== '/'
     },
     pathName() {
-      return getPathName(this.path)
+      return getPathName(this.rootPath)
     }
   }
 }
