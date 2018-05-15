@@ -9,13 +9,18 @@
         </li>
       </ul>
     </div>
-    {{ id }}
+    <BlogContent />
   </div>
 </template>
 
 <script>
+import BlogContent from './BlogContent'
+
 export default {
   name: 'Blog',
+  components: {
+    BlogContent
+  },
   computed: {
     id() {
       return this.$route.params.id
