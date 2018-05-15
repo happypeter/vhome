@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Ga from '@/components/Ga'
 import Resume from '@/components/Resume'
 import Blog from '@/components/Blog'
+import BlogHome from '@/components/BlogHome'
 import Note from '@/components/Note'
 
 Vue.use(Router)
@@ -29,6 +30,10 @@ export default new Router({
     },
     {
       path: '/blog',
+      component: BlogHome
+    },
+    {
+      path: '/blog/:id',
       component: Blog
     }
   ]
