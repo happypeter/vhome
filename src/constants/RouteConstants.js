@@ -6,4 +6,8 @@ const paths = {
   '/note': '笔记'
 }
 
-export const getPathName = path => paths[path]
+const getRootPath = path => {
+  return '/' + path.split('/')[1]
+}
+
+export const getPathName = path => paths[getRootPath(path)]
