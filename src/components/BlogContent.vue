@@ -1,25 +1,20 @@
 <template>
   <div>
-    <h1>{{ post.title }}</h1>
-    <p>
-      {{ post.body }}
-    </p>
+    content
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'BlogContent',
-  computed: {
-    id() {
-      return this.$route.params.id
-    },
-    posts() {
-      return this.$store.state.blog.all
-    },
-    post() {
-      return this.posts.find(t => t.id == this.id)
-    }
+  created() {
+    console.log('BlogContent created')
+    const uri =
+      'https://raw.githubusercontent.com/happypeter/vhome/master/data/posts/1.md'
+    axios.get(uri).then(res => {
+      console.log('my Post', res.data)
+    })
   }
 }
 </script>
