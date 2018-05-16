@@ -14,6 +14,7 @@
 <script>
 import { API_URL } from '../constants/ApiConstants'
 import axios from 'axios'
+
 export default {
   name: 'BlogHome',
   data: () => ({
