@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ htmlPost }}
+    <div v-html="htmlPost"></div>
   </div>
 </template>
 
