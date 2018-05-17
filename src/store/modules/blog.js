@@ -8,7 +8,6 @@ const state = {
 const mutations = {
   loadPostToc(state, posts) {
     state.toc = posts
-    console.log('mutation', state.toc)
   }
 }
 
