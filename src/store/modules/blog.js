@@ -17,6 +17,12 @@ const actions = {
     axios.get(uri).then(res => {
       commit('loadPostToc', res.data)
     })
+  },
+  fetchPost({ commit }, { id }) {
+    const uri = `${API_URL}/posts/${id}.md`
+    axios.get(uri).then(res => {
+      console.log('fetchPost....', res.data)
+    })
   }
 }
 

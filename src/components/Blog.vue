@@ -2,7 +2,7 @@
   <div class="blog">
     <div class="sidebar">
       <ul>
-        <li :key="t.id" v-for="t in posts">
+        <li :key="t.id" v-for="t in postToc" v-on:click="getPost(t.id)">
           <router-link active-class="active" :to="`/blog/${t.id}`">
           {{ t.title}}
           </router-link>
@@ -25,8 +25,13 @@ export default {
     id() {
       return this.$route.params.id
     },
-    posts() {
-      return this.$store.state.blog.all
+    postToc() {
+      return this.$store.state.blog.toc
+    }
+  },
+  methods: {
+    getPost: function(id) {
+      this.$store.dispatch({ type: 'fetchPost', id })
     }
   }
 }
