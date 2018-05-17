@@ -17,7 +17,7 @@ export default {
     Footer
   },
   created() {
-    this.$store.dispatch({ type: 'fetchPosts' })
+    this.$store.dispatch({ type: 'fetchPostToc' })
   }
 }
 </script>

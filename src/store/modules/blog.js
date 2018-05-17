@@ -1,20 +1,22 @@
 import axios from 'axios'
+import { API_URL } from '../../constants/ApiConstants'
 
 const state = {
-  all: []
+  toc: []
 }
 
 const mutations = {
-  loadPosts(state, posts) {
-    state.all = posts
+  loadPostToc(state, posts) {
+    state.toc = posts
+    console.log('mutation', state.toc)
   }
 }
 
 const actions = {
-  fetchPosts({ commit }) {
-    const uri = 'https://jsonplaceholder.typicode.com/posts/'
+  fetchPostToc({ commit }) {
+    const uri = `${API_URL}/posts/index.json`
     axios.get(uri).then(res => {
-      commit('loadPosts', res.data)
+      commit('loadPostToc', res.data)
     })
   }
 }
