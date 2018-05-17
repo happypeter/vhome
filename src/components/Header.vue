@@ -49,6 +49,7 @@ svg {
 .more {
   display: flex;
 }
+
 a {
   line-height: 50px;
   display: block;
