@@ -2,12 +2,16 @@ import axios from 'axios'
 import { API_URL } from '../../constants/ApiConstants'
 
 const state = {
-  toc: []
+  toc: [],
+  currentPost: ''
 }
 
 const mutations = {
   loadPostToc(state, posts) {
     state.toc = posts
+  },
+  loadCurrentPost(state, post) {
+    state.currentPost = post
   }
 }
 
@@ -21,7 +25,7 @@ const actions = {
   fetchPost({ commit }, { id }) {
     const uri = `${API_URL}/posts/${id}.md`
     axios.get(uri).then(res => {
-      console.log('fetchPost....', res.data)
+      commit('loadCurrentPost', res.data)
     })
   }
 }
