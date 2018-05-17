@@ -17,6 +17,10 @@ export default {
     htmlPost() {
       return md.render(this.post)
     }
+  },
+  created() {
+    const { id } = this.$route.params
+    this.$store.dispatch({ type: 'fetchPost', id })
   }
 }
 </script>
