@@ -9,7 +9,10 @@
         </li>
       </ul>
     </div>
-    <BlogContent />
+    <div class="content-wrap">
+      <BlogContent />
+    </div>
+ 
   </div>
 </template>
 
@@ -44,12 +47,33 @@ export default {
 }
 
 .sidebar {
-  border: 2px solid red;
+  background-color: #53a6ae;
   flex-basis: 200px;
+  flex-shrink: 0;
+  padding-left: 20px;
+  padding-top: 30px;
 }
 
-.active {
-  font-size: 30px;
-  color: red;
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  color: white;
+  opacity: 0.7;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+li a.active {
+  opacity: 1;
+}
+
+.content-wrap {
+  flex-grow: 1;
 }
 </style>

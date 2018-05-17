@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <div v-html="htmlPost"></div>
+  <div class="page">
+    <div class="content">
+      <div v-html="htmlPost"></div>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -24,3 +27,22 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.page {
+  padding: 20px;
+  min-height: 70vh;
+  background: linear-gradient(
+    -134.8deg,
+    rgba(255, 255, 255, 1),
+    rgba(167, 203, 208, 1)
+  );
+}
+
+.content {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 5px 10px 7px 0px rgba(197, 190, 190, 0.5);
+  border-radius: 4px;
+  padding: 20px;
+}
+</style>
