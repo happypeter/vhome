@@ -18,6 +18,10 @@ export default new Router({
     },
     {
       path: '/ga',
+      redirect: '/ga/life'
+    },
+    {
+      path: '/ga/:id',
       component: Ga
     },
     {

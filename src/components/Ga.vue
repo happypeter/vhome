@@ -9,14 +9,21 @@
          </li>
        </ul>
      </div>
+     <div class="main">
+       <GaContent />
+     </div>
   </div>
 </template>
 
 
 <script>
 import { tocArray } from '../constants/gaConstants'
+import GaContent from './GaContent'
 export default {
   name: 'Ga',
+  components: {
+    GaContent
+  },
   computed: {
     tocList: function() {
       return tocArray
@@ -24,3 +31,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.ga {
+  display: flex;
+}
+
+.sidebar {
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+</style>
