@@ -8,9 +8,7 @@
 </template>
 
 <script>
-import axios from 'axios'
 import md from '../utils/markdownUtils'
-import { API_URL } from '../constants/ApiConstants'
 export default {
   name: 'BlogContent',
   computed: {
