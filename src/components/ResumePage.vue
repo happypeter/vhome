@@ -1,8 +1,12 @@
 <template>
 <div>
-  hello {{ skills   }}
   <div v-for="k in skills" :key="k.id">
-    {{ k.level }}
+    <b>{{k.id}}</b> {{ k.level }}
+    <div class="bar">
+      <div class="lev">
+
+      </div>
+    </div>
   </div>
 </div>
 </template>
@@ -20,3 +24,17 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.bar {
+  width: 200px;
+  height: 20px;
+  border: 2px solid black;
+  display: flex;
+}
+
+.lev {
+  width: 50%;
+  background-color: red;
+}
+</style>
