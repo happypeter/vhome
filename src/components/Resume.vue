@@ -1,7 +1,7 @@
 <template>
   <div class="resume">
     <div class="wrap">
-      Page
+      <Page />
     </div>
   </div>
 </template>
