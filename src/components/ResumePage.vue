@@ -3,7 +3,7 @@
   <div v-for="k in skills" :key="k.id">
     <b>{{k.id}}</b> {{ k.level }}
     <div class="bar">
-      <div class="lev" style="width: 80%">
+      <div class="lev" :style="`width: ${k.level}`">
 
       </div>
     </div>
@@ -20,6 +20,9 @@ export default {
   computed: {
     skills() {
       return this.$store.state.resume.skills
+    },
+    percent() {
+      return '80%'
     }
   }
 }
