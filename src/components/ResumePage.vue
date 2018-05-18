@@ -3,7 +3,7 @@
   <div v-for="k in skills" :key="k.id">
     <b>{{k.id}}</b> {{ k.level }}
     <div class="bar">
-      <div class="lev">
+      <div class="lev" style="width: 80%">
 
       </div>
     </div>
@@ -34,7 +34,6 @@ export default {
 }
 
 .lev {
-  width: 50%;
   background-color: red;
 }
 </style>
