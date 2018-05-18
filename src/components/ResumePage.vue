@@ -1,8 +1,9 @@
 <template>
 <div>
-  {{
-    skills
-  }}
+  hello {{ skills   }}
+  <div v-for="k in skills" :key="k.id">
+    {{ k.level }}
+  </div>
 </div>
 </template>
 
