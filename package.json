@@ -13,6 +13,7 @@
     "highlight.js": "^9.12.0",
     "markdown-it": "^8.4.1",
     "vue": "^2.5.16",
+    "vue-masonry": "^0.11.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
